@@ -2,8 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 
 
-a = requests.get('https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/')
-html = a.content
+# a = requests.get('https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/')
+# html = a.content
+#
+# bs = BeautifulSoup(html)
+# print(bs.prettify())
 
-bs = BeautifulSoup(html)
-print(bs.prettify())
+for i in range(5):
+    print(i)
