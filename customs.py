@@ -77,7 +77,8 @@ def get_data(index, cur):
 
 
 # db = MySQLdb.connect('127.0.0.1', 'root', '111111', 'customs')
-db = MySQLdb.connect(host='127.0.0.1', port=3307, user='root', passwd='111111', db='customs', charset='utf8')
+# db = MySQLdb.connect(host='127.0.0.1', port=3307, user='root', passwd='111111', db='customs', charset='utf8')
+db = MySQLdb.connect(host='192.168.1.252', port=3305, user='root', passwd='slysSE4RFV', db='ecus', charset='utf8')
 cursor = db.cursor()
 
 # for i in range(2364):
@@ -87,8 +88,14 @@ if __name__ == '__main__':
     # pass
     # get_data(1, cursor)
     # db.commit()
-    for i in range(170, 2364):
-        get_data(i+1, cursor)
-        db.commit()
-        print('已完成第%s页' % str(i+1))
+    # for i in range(2364):
+    i = 2026
+    get_data(i+1, cursor)
+    db.commit()
+    print('已完成第%s页' % str(i+1))
+#     2026: rate_temp_in
+#     11: dict
+#     34: items
+#     360: rate_sale
+
 
